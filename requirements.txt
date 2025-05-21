@@ -1,0 +1,7 @@
+!pip install python-dotenv
+!pip install openai-whisper
+from dotenv import load_dotenv
+import os
+import requests
+import pandas as pd
+import whisper
