@@ -10,7 +10,14 @@ Original file is located at
 """
 
 # Ruta al archivo .env dentro de tu Google Drive
-dotenv_path = "/.env.development"
+
+import os
+import requests
+from dotenv import load_dotenv
+import pandas as pd
+import whisper
+
+dotenv_path = ".env.development"
 
 load_dotenv(dotenv_path)
 
@@ -93,4 +100,4 @@ print(df_filtrado[['ID', 'uniqueid', 'duracion_segundos', 'transcripcion']].head
 
 # (Opcional) Guardar en CSV o sobrescribir `df`
 df.update(df_filtrado[['transcripcion']])
-df_filtrado.to_csv("/transcripciones.csv", index=False)
+df_filtrado.to_csv("transcripciones.csv", index=False)

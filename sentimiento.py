@@ -10,7 +10,8 @@ Original file is located at
 """
 
 # 1. Leer el archivo CSV
-ruta_archivo = "/content/drive/MyDrive/UBA_Inteligencia_Artificial/TP FIUBA IA/TP FINAL Analisis Sentimiento Call Center/transcripciones.csv"
+import pandas as pd
+ruta_archivo = "transcripciones.csv"
 df = pd.read_csv(ruta_archivo)
 
 # 2. Función básica de análisis de sentimiento basada en keywords (puede reemplazarse con modelo NLP)
