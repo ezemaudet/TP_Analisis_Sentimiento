@@ -24,10 +24,10 @@ load_dotenv(dotenv_path)
 # Configuración de la API
 API_KEY = os.getenv("API_KEY_vozelia")
 TENANT = os.getenv("TENANT_vozelia")
-START_DATE = "2025-05-16"
-END_DATE = "2025-05-17"
-TIME=60
-prueba=3
+START_DATE = os.getenv("START_DATE")
+END_DATE = os.getenv("END_DATE")
+TIME= int (os.getenv("TIME"))
+cant_grab = int (os.getenv("cant_grab"))
 
 # URL para obtener los registros de llamadas en CSV
 url = f"https://pbxone.vozelia.com.pa/pbx/proxyapi.php?key={API_KEY}&reqtype=INFO&info=CDRS&format=csv&tenant={TENANT}&start={START_DATE}&end={END_DATE}"
@@ -54,7 +54,7 @@ df['duracion_timedelta'] = df['end'] - df['answer']
 df['duracion_segundos'] = df['duracion_timedelta'].dt.total_seconds()
 
 # 2. Filtrar llamadas con duración > XX segundos
-df_filtrado = df[df['duracion_segundos'] > TIME].head(prueba).copy()
+df_filtrado = df[df['duracion_segundos'] > TIME].head(cant_grab).copy()
 df_filtrado['transcripcion'] = None  # Crear columna vacía para la transcripción
 
 #model = whisper.load_model("medium")
