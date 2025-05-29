@@ -17,9 +17,9 @@ from dotenv import load_dotenv
 import pandas as pd
 import whisper
 
-dotenv_path = ".env.development"
 
-load_dotenv(dotenv_path)
+
+load_dotenv()
 
 # Configuración de la API
 API_KEY = os.getenv("API_KEY_vozelia")
