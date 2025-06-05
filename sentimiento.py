@@ -9,7 +9,7 @@ Original file is located at
 **Analisis de Sentimiento**
 """
 
-# 1. Leer el archivo CSV
+#1. Leer el archivo CSV
 import pandas as pd
 ruta_archivo = "transcripciones.csv"
 df = pd.read_csv(ruta_archivo)
