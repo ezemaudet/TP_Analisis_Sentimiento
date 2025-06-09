@@ -3,4 +3,7 @@ openai-whisper
 requests
 pandas
 whisper
-xxx
+numpy
+matplotlib
+python-Levenshtein
+jiwer
