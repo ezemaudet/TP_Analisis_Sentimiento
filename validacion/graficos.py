@@ -42,7 +42,7 @@ ax1.set_xticks(x)
 ax1.set_xticklabels(resumen["modelo"])
 ax1.legend()
 plt.tight_layout()
-plt.savefig("transcripciones/distancia_por_modelo_normalizada.png")
+plt.savefig("transcripciones/distancia_por_modelo.png")
 plt.close()
 
 # Graficamos los tiempos como siempre
