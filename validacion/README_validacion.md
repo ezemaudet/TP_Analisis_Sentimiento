@@ -32,11 +32,12 @@ El flujo completo consta de 4 etapas principales:
 
 4️⃣ **Generación de gráficos**
 - Archivo: `graficos.py`
-- Calcula promedios por modelo.
+- Calcula promedios de las distancias NORMALIZADAS por modelo y de los tiempos de ejecucion.
 - Genera los gráficos:
   - `distancia_por_modelo.png` (errores)
   - `tiempo_por_modelo.png` (tiempo de ejecución)
-- Los gráficos se guardan automáticamente en `transcripciones/graficos/`.
+- Los gráficos se guardan automáticamente en `transcripciones/`.
+- Se guarda una tabla resumn de los resultados
 
 ---
 
