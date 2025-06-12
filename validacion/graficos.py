@@ -17,7 +17,7 @@ resumen = metricas_df.groupby("modelo").agg({
 
 # Normalizamos Levenshtein
 resumen["levenshtein_norm"] = resumen["levenshtein"] / resumen["levenshtein"].max()
-
+resumen = resumen.iloc[[0,3,2,1]]
 # Exportamos el resumen normalizado a CSV
 resumen.to_csv("transcripciones/resumen_normalizado.csv", index=False)
 
