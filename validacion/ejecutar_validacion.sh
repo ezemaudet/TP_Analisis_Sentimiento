@@ -37,4 +37,12 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+echo "Ejecutando llamadas_dia.py..."
+
+python llamadas_dia.py
+if [ $? -ne 0 ]; then
+  echo "Error al ejecutar llamadas_dia.py"
+  exit 1
+fi
+
 echo "Pipeline completado exitosamente."

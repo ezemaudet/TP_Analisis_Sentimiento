@@ -5,7 +5,7 @@ import Levenshtein
 import jiwer
 
 # Leer las transcripciones reales (true) y las generadas por los modelos
-true_path = "transcripciones/true_transcripciones.csv"
+true_path = "true_transcripciones.csv"
 resultados_path = "transcripciones/transcripciones_tiempos.csv"
 
 # Cargamos las transcripciones verdaderas

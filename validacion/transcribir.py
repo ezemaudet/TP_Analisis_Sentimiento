@@ -56,7 +56,9 @@ for modelo_usado in modelos:
         except Exception as e:
             print(f"Error al transcribir {archivo_audio} con {modelo_usado}: {e}")
 
+
 # Guardamos resultados en CSV
 df_resultados = pd.DataFrame(resultados)
+df_resultados.rename(columns={"tiempo": "tiempo_procesamiento_seg"}, inplace=True)
 df_resultados.to_csv("transcripciones/transcripciones_tiempos.csv", index=False)
 print("Proceso de transcripción completado.")
