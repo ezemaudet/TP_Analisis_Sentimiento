@@ -54,7 +54,7 @@ resumen = metricas_df.groupby("modelo").agg({
 resumen["levenshtein_norm"] = resumen["levenshtein"] / resumen["levenshtein"].max()
 
 # Reordenar modelos si es necesario
-resumen = resumen.iloc[[0, 3, 2, 1]]
+resumen = resumen.iloc[[3,0,4, 2, 1]]
 
 resumen = resumen[["modelo","levenshtein","wer","cer","levenshtein_norm","tiempo_procesamiento_seg","tiempo_grabacion_seg","relacion_proc_vs_grab"]]
 

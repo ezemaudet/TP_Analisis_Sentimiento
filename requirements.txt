@@ -7,3 +7,4 @@ numpy
 matplotlib
 python-Levenshtein
 jiwer
+openai
