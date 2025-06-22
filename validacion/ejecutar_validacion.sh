@@ -21,6 +21,14 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+# Ejecutar openai_transcribir.py
+echo "Ejecutando openai_transcribir.py..."
+python openai_transcribir.py
+if [ $? -ne 0 ]; then
+  echo "Error al ejecutar transcribir.py"
+  exit 1
+fi
+
 # Ejecutar distancia.py
 echo "Ejecutando distancia.py..."
 python distancia.py
