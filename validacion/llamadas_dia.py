@@ -59,7 +59,8 @@ resumen_cantidad.to_csv("resultados_llamadas/cantidad_llamadas_diaria.csv", inde
 
 # --- Gráfico 1: Duración total diaria (en minutos) ---
 plt.figure(figsize=(12, 6))
-plt.plot(resumen_duracion["fecha"], resumen_duracion["total_duracion_min"], marker="o")
+#plt.plot(resumen_duracion["fecha"], resumen_duracion["total_duracion_min"], marker="o")
+plt.bar(resumen_duracion["fecha"], resumen_duracion["total_duracion_min"], color="skyblue", edgecolor="black")
 plt.xticks(rotation=45)
 plt.xlabel("Fecha")
 plt.ylabel("Duración total (minutos)")
