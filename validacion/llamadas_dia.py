@@ -80,4 +80,17 @@ plt.tight_layout()
 plt.savefig("resultados_llamadas/cantidad_llamadas_diaria.png")
 plt.close()
 
+# Filtrar llamadas válidas (duración no nula y mayor que 10 seg y menor que 500 seg )
+df_validas = df[df["duration"].notna() & (df["duration"] > 10) & (df["duration"] < 500)]
+
+# Histograma de duración de llamadas
+plt.figure(figsize=(10, 6))
+plt.hist(df_validas["duration"], bins=30, color="steelblue", edgecolor="black")
+plt.xlabel("Duración de llamada (segundos)")
+plt.ylabel("Cantidad de llamadas")
+plt.title("Distribución de duración de llamadas mayores a 10 Seg. y menores a 500 Seg.")
+plt.tight_layout()
+plt.savefig("resultados_llamadas/histograma_duracion_llamadas.png")
+plt.show()
+
 print("Tablas y gráficos guardados en carpeta 'resultados_llamadas'")
